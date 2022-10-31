@@ -6,7 +6,7 @@
 
   > Posts feed application for Ignite Bootcamp.
 
-  <!-- [![Netlify Status](https://api.netlify.com/api/v1/badges/01e9e021-7272-4845-885e-e92d23d54a35/deploy-status)](https://rainbow-griffin-bf19a4.netlify.app) -->
+  [![Netlify Status](https://api.netlify.com/api/v1/badges/01e9e021-7272-4845-885e-e92d23d54a35/deploy-status)](https://peppy-begonia-339603.netlify.app)
 </div>
 
 <div align="center">
