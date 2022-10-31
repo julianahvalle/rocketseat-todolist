@@ -1,0 +1,121 @@
+.taskCard {
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+
+  width: 100%;
+  padding: 1rem;
+
+  background-color: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  border-radius: 8px;
+}
+
+div.taskCard + div.taskCard {
+  margin-top: 1rem;
+}
+
+p.task {
+  font-size: .875rem;
+  line-height: 1.4rem;
+  color: var(--gray-100);
+  flex: 1;
+}
+
+.taskInput {
+  display: flex;
+  flex:1;
+  position: relative;
+  padding-left: 1.2rem;
+  cursor: pointer;
+
+}
+
+.task.taskChecked {
+  text-decoration: line-through;
+}
+
+.taskInput input {
+  opacity: 0;
+}
+
+.checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(1.5rem - 2px);
+  width: calc(1.5rem - 2px);
+  border:2px solid var(--blue);
+  border-radius:999px;
+  background-color: transparent;
+
+  transition: background-color .2s;
+}
+
+.checkbox:hover {
+  background-color: var(--blue-dark);
+}
+
+.taskInput input:checked ~ .checkbox {
+  background-color: var(--purple-dark);
+  border-color: var(--purple-dark);
+}
+
+.checkbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.taskInput input:checked ~ .checkbox:after {
+  display: block;
+}
+
+.taskInput .checkbox:after {
+  left: .4rem;
+  top: .15rem;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-width: 0 2px 2px 0;
+  animation: slideFromUp .1s;
+  transition: .1s;
+}
+
+@keyframes slideFromUp {
+  from{
+    transform: translateY(-100%);
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to{
+    transform: translateY(0);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+button.taskDelete {
+  background: transparent;
+  border: none;
+  color: var(--gray-300);
+  display:flex;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  padding: .31rem;
+
+  trnsition: background-color .2s;
+}
+
+button.taskDelete:hover{
+  color: var(--danger);
+  background: var(--gray-400);
+  border-radius: 8px;
+}
+
